@@ -1,0 +1,25 @@
+img {
+  width: 10rem;
+  height: 10rem;
+}
+.updateForm {
+  border-style: solid;
+  width: 80rem;
+  height: 30rem;
+  background-color: floralwhite;
+  margin: auto;
+}
+.paragraphForm{
+  margin-left: 1rem;
+}
+.paragraphForm input{
+  width: 54rem;
+  display: flex;
+  align-items: center
+}
+form #btnForm{
+  width: 15rem;
+ margin-left: 10rem;
+}
+.creatItemDiv{margin-bottom: 1rem;margin-left: 3.5rem;}
+#creatBtn{margin-left: 0.5rem;}

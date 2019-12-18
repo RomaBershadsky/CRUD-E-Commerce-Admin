@@ -1,0 +1,91 @@
+
+<div class="main-content">
+        <div class="creatItemDiv">
+        category <input [(ngModel)]="category">
+        name <input [(ngModel)]="name">
+        image <input [(ngModel)]="img">
+        price <input [(ngModel)]="price">
+        description <input [(ngModel)]="description">
+        <button mat-raised-button color="primary" id="creatBtn" (click)="create(category,name,img,price,description)">Create</button>
+        </div>
+        <form class="updateForm"*ngIf="updateProduct">
+                <h2 class="paragraphForm">Edit Product</h2>
+                <p class="paragraphForm">Category: &nbsp;<input type="text" name="category" [(ngModel)]="updateProduct.category" /></p>
+                <p class="paragraphForm">Name: &nbsp;<input type="text" name="name" [(ngModel)]="updateProduct.name" /></p>
+                <p class="paragraphForm">image: &nbsp;<input type="text" name="img" [(ngModel)]="updateProduct.img" /></p>
+                 <p class="paragraphForm">Price: &nbsp;<input type="text" name="price" [(ngModel)]="updateProduct.price" /></p>
+                 <p class="paragraphForm">description: &nbsp;<input type="text" name="description" [(ngModel)]="updateProduct.description" /></p>
+                <p>
+                  <button type="button" class="btn btn-primary" id="btnForm" (click)="update(updateProduct)">Submit</button>  
+                </p>
+              </form>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Product List</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <!-- <table class="table" > -->
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Category
+                                    </th>
+                                    <th>
+                                        Name
+                                    </th>
+                                    <th>
+                                        Image
+                                    </th>
+                                    <th>
+                                        Description
+                                    </th>
+                                    <th>
+                                        Price
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of newArrivals">
+                                        <td>
+                                            {{product.category}}
+                                        </td>
+                                        <td>
+                                            {{product.name}}
+                                        </td>
+                                        <td>
+                                            <img src="{{product.img}}">
+                                        </td>
+                                        <td>
+                                            {{product.description}}
+                                        </td>
+                                        <td class="text-primary">
+                                            {{product.price | currency}}
+                                        </td>
+                                        <td class="text-primary">
+                                            <button mat-raised-button color="primary"
+                                                (click)="sendUpdate(product)">Update</button>
+                                        </td>
+                                        <td class="text-primary">
+                                            <button mat-raised-button color="warn"
+                                                (click)="delete(product.id)">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<app-table-list-details [product]="selectedProduct"></app-table-list-details>
