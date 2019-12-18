@@ -3,4 +3,4 @@ E-Commerce Admin Website with working CRUD.
 With this site you will be able to add remove and update your items on your Ecommerce site(https://shopwithme-1e0e3.firebaseapp.com/).
 Technologys that have been used are: Angular, FireBase, Angular Material, BootStrap, HTML, CSS.
 LIVE DEMO: https://admin-control-app.firebaseapp.com/#/dashboard
-
+![](images/AdminExample.PNG)
